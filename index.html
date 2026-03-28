@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>portfolio Sokhna khady Loum</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', sans-serif;
+                background: #0f172a;
+                color: white;
+            }
+
+            /*CONTENEUR GLOBAL */
+            .container {
+                max-width: 1000px;
+                margin: auto;
+                padding: 20px;
+            }
+            /* HEADER */
+            header{
+                text-align: center;
+                padding: 80px 20px;
+            }
+            /*TITRE */
+            h1, h2 {
+                text-align: center;
+            }
+
+            /*BOUTONS */
+            .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #22c55e;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            }
+
+            /* SECTION*/
+            section {
+                margin-top: 40px;
+            }
+            /* CARDS */
+            .cards {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 20px;
+         justify-content: center;
+            }
+
+            .cards {
+                background: #1e293b;
+                padding: 20px;
+                border-radius: 12px;
+                width: 250px;
+                text-align: center;
+            }
+
+            /* RESPONSIVE (téléphone) */
+            @media(max-width: 600px){
+                .cards {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            header img {
+                width: 300px;
+                border-right: 200%;
+            }
+
+             .text {
+                max-width: 500px;
+             }
+            h1 {
+                font-size: 42px;
+                margin-bottom: 10px;
+            }
+
+            p {
+color: #cbd5e1;
+            }
+            .btn {
+                display: inline-block;
+                margin-top: 20px;
+                background: #22c55e;
+                padding: 12px 25px;
+                border-radius: 8px;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+            .btn {
+                display: inline-block;
+                margin-top: 20px;
+            }
+            .btn-container {
+                text-align: center;
+            }
+            /* SECTIONS */
+            section {
+                padding: 60px 20px;
+                max-width: 1000px;
+                margin: auto;
+            }
+            h2 {
+              margin-bottom: 20px;
+            }
+            .cards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .cards {
+                background: #1e293b;
+                padding: 20px;
+                border-radius: 12px;
+                flex: 1 1 200px;
+                transition: 0.3s;
+            }
+
+            .cards:hover {
+                transform: scale(1.05);
+            }
+
+            /* WHATSAPP BUTTON */
+            .whatsapp {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: #25D366;
+                padding: 15px;
+                border-radius: 50%;
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+            }
+            /* FOOTER */
+            footer {
+                text-align: center;
+                padding: 30px;
+                background: #020617;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <header>
+            <img src="khadija.jpeg" alt="photo">
+
+            <div class="text">
+            <h1>Sokhna khady Loum</h1>
+            <p>Assistante Comptable et Administrative | Sénégal</p>
+            <a href="#contact" class="btn">Me contacter</a>
+            </div>
+        </header>
+
+        <section>
+            <h2>A propos</h2>
+            <p>
+                Je suis Sokhna Khady Loum étudiante en licence en Finance & Comptabilité et en Informatique, spécialisée en développement d'applications web et mobile.
+                </p>
+                <p>
+                Je dispose d'une expérience en comptabilié et en gestion administrative,
+                ce qui me permet d'accompagner efficacement les entreprises dans la gestion 
+                de leurs activités (comptabilité, stock, facturation, fiscalité).
+               </p>
+              <p>
+                Sérieuse, organisée et motivée, mon objectif est de développer continuellement
+                 mes compétences et d'apporter une réelle valeur aux organisations.
+            </p>
+            
+        </section>
+        <section>
+            <h2>Mes services</h2>
+            <div class="card">
+            <div class="card">Comptabilité de base</div>
+            <div class="card">Gestion de stock</div>
+            <div class="card">Facturation</div>
+            <div class="card">Déclaration fiscal </div>
+            <div class="card">Organisation Administrative</div>
+            <div class="card">Excel & Gestion de donnéés</div>
+             <div class="card">Gestion de documents</div>
+             </div>
+        </section>
+        <section>
+            <h2>Expériences</h2>
+            <div class="card">
+                <div class="card">
+                            <h3>Clinique Magui-i-Mag</h3>
+                            <p>Assistante Comptable et Administrative</p>
+                        </div>
+                        <div class="card">
+                            <h3>Magasin matériaux</h3>
+                            <p>Gestionnaire de stock</p>
+                        </div>
+                    </div>
+                    </div>
+        </section>
+        
+        <div class="btn-container">
+        <a href="CV.pdf.png" class="btn" target="_blank">voir mon CV</a>
+        </div>
+        <section id="contact">
+            <h2>contact</h2>
+            <p>Téléphone: 774162361</p>
+            <p>Email: loumsokhnakhady3@gmail.com</p>
+        </section>
+
+        <!-- whatsApp-->
+        <footer>
+            <p> &copy; <span id="year"></span> Sokhna khady Loum- tous droits réservés</p>
+            <script>
+                document.getElementById('year').innerHTML = new Date().getFullYear();
+            </script>
+        </footer>
+    </body>
+
+</html>
