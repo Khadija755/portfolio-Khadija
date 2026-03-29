@@ -217,6 +217,25 @@ color: #cbd5e1;
                 document.getElementById('year').innerHTML = new Date().getFullYear();
             </script>
         </footer>
+        <!-- TON FORMULAIRE ICI -->
+        <script>
+            function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            var nom= document.getElementById("nom").value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById("message").value;
+
+            var numero = "221774162361"; // 👉👉 TON NUMERO
+
+            var url ="https://wa.me/"+ numero + "?text="
+            + "Nom: "+ nom + "%0A"
+            + "Email: " + email + "%0A"
+            + "Message: "+ message;
+
+            window.open(url, "_blank");
+            }
+                </script>
     </body>
 
 </html>
