@@ -5,6 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>portfolio Sokhna khady Loum</title>
         <style>
+            .navbar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background: #020617;
+                display: flex;
+                justify-content: space-between;
+                padding: 15px 30px;
+                z-index: 1000;
+            }
+
+            .navbar a {
+                color: white;
+                margin-left: 15px;
+                text-decoration: none;
+            }
+
+            .navbar a:hover {
+                color: #22c55e;
+            }
             button:hover, a:hover {
                 background: #0b7dda !important;
             }
@@ -17,6 +37,9 @@
             }
             .logo {
                 width: 250px;
+            }
+            html {
+                scroll-behavior: smooth;
             }
             body {
                 margin: 0;
@@ -40,7 +63,9 @@
             h1, h2 {
                 text-align: center;
             }
-
+            header {
+                margin-top: 60px;
+            }
             /*BOUTONS */
             .btn {
             display: inline-block;
@@ -136,7 +161,8 @@ color: #cbd5e1;
             }
 
             .cards:hover {
-                transform: scale(1.05);
+                transform: translatey(-10px) scale(1.03);
+                background: #334155;
             }
 
             /* WHATSAPP BUTTON */
@@ -157,9 +183,28 @@ color: #cbd5e1;
                 padding: 30px;
                 background: #020617;
             }
+            .hidden {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 1s;
+            }
+
+            .show {
+                opacity: 1;
+                transform: translateY(0);
+            }
         </style>
     </head>
     <body>
+        <nav class="navbar">
+            <h3>khadija</h3>
+            <div>
+                <a href="#about">A propos</a>
+                <a href="#services">Services</a>
+                <a href="#projets">Projets</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
         <div class="container">
             <header>
                 <img src="logo.jpeg" alt="logo">
@@ -172,7 +217,7 @@ color: #cbd5e1;
             </div>
         </header>
 
-        <section>
+        <section class="hidden>
             <h2>A propos</h2>
             <p>
                 Je suis Sokhna Khady Loum étudiante en licence en Finance & Comptabilité et en Informatique, spécialisée en développement d'applications web et mobile.
@@ -187,8 +232,28 @@ color: #cbd5e1;
                  mes compétences et d'apporter une réelle valeur aux organisations.
             </p>
             
+        </section> 
+            <section id="projects" class="hidden">
+            <h2>Mes projets</h2>
+
+            <Div class="cards">
+
+                <div class="card">
+                    <h3>Site e-commerce</h3>
+                    <p>Création d'une boutique en ligne</p>
+                </div>
+                <div class="card">
+                    <h3>Porfolio personnel</h3>
+                    <p>Site pour présenter mes compétences</p>
+                </div>
+
+                <div class="card">
+                    <h3>Application de gestion</h3>
+                    <p>Gestion de stock simple</p>
+                </div>
+            </Div>
         </section>
-        <section>
+        <section class="hidden">
             <h2>Mes services</h2>
             <div class="cards">
             <div class="card">
@@ -201,7 +266,7 @@ color: #cbd5e1;
             </div>
         </div>
         </section>
-        <section>
+        <section class="hidden">
            <h2>Compétences Informatiques</h2>
            <div class="cards">
 
@@ -226,7 +291,7 @@ color: #cbd5e1;
                 </div>
             </div>
         </section>
-        <section>
+        <section class="hidden">
             <h2>Expériences</h2>
             <div class="cards">
 
@@ -245,7 +310,7 @@ color: #cbd5e1;
         <div class="btn-container">
         <a href="CV.pdf.png" style="background:#2196f3; color:white; padding: 10px 15px; text-decoration:none; border-radius:5px;">voir mon CV</a>
         </div>
-        <section id="contact">
+        <section id="contact" class="hidden">
             <h2 style="text-align: center;">contact</h2>
 
             <div class="cards">
@@ -309,6 +374,18 @@ color: #cbd5e1;
 
             window.open(url, "_blank");
             }
+                </script>
+        <script>
+                    const elements =document.querySelectorAll(".hidden");
+
+                    window.addEventListener("scroll", () => {
+                        elements.forEach(el => {
+                            const position = el.getBoundingClientRect().top;
+                            if(position < window.innerHeight){
+                                el.classList.add("show");
+                            }
+                        });
+                    });
                 </script>
     </body>
 
